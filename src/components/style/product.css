@@ -1,0 +1,37 @@
+.product-carousel-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .carousel-item {
+    text-align: center;
+  }
+  
+  .carousel-img {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px; /* Center the image horizontally */
+    display: block; /* Make sure the image behaves like a block-level element */
+  }
+  
+  .carousel-title {
+    margin-bottom: 10px;
+  }
+  
+  .carousel-desc {
+    line-height: 1.6;
+  }
+  
+  .ant-carousel .slick-prev,
+  .ant-carousel .slick-next {
+    color: #495E74;
+    font-size: 30px;
+    z-index: 1;
+  }
+  
+  .ant-carousel .slick-prev:hover,
+  .ant-carousel .slick-next:hover {
+    color: #1E2D3A;
+  }
+  

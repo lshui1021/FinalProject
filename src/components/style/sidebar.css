@@ -1,0 +1,21 @@
+/* src/style/sidebar.css */
+.sidebar {
+  background-color: rgba(235, 243, 255, 0.9);
+  width: fit-content;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 25px;
+  overflow: auto;
+  max-height: 70%;
+}
+
+.sidebar-item {
+  list-style: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  background-color: #ddd;
+}
