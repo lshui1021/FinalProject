@@ -1,32 +1,60 @@
-import '/src/components/style/report.css';
+import { Timeline } from "antd";
+import FlowChart from "./dataflow";
+
 function Abstract(){
     return (
         <div>
-            <img
-                className='company-image'
-                src="https://gustech.com/wp-content/uploads/2021/04/3501104_1-1.jpg"/>
-            
             <h2>研究主題</h2>
             <p>
-                This project focuses on developing an internal tool to improve administrative efficiency in the company. 
-                It aims to digitize manual processes using Blazor, Radzen, and SQL Server, making routine operations more streamlined and organized.
+                人工比對電池製程資料的挑戰與改善：從Excel到大數據平台的轉型
             </p>
 
             <h2>摘要</h2>
             <p>
-                This project focuses on developing an internal tool to improve administrative efficiency in the company. 
-                It aims to digitize manual processes using Blazor, Radzen, and SQL Server, making routine operations more streamlined and organized.
+                本專案針對企業內部電池製程資料整合與跨部門行政作業流程進行優化，導入大數據平台作為核心解決方案。
+                傳統作業中，製造與品保部門需手動透過 Excel 檔案進行資料彙整與比對，常因格式不一致或資料遺漏導致流程中斷與出貨延誤。
+                透過系統化的資料整合與平台自動化功能，成功降低人工錯誤率、縮短作業時間，並提高資料可追溯性。
+                本專案採用 Blazor 搭配 Radzen 元件作為前端技術，後端則採用 MS SQL 與 C#，整合製造流程與出貨資料，達成資訊即時共享與作業效率提升的目標。
             </p>
 
-            <div className="bgtext">
-                <h2>問題背景</h2>
-                手動處理表單繁瑣、資料分散、重複作業、缺乏統一平台、難以追蹤進度等。
-            </div>
-            <img
-             className="formPic"
-             src="https://images.unsplash.com/photo-1554224155-1696413565d3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-             alt="formPic"
-             style={{ width: '400px', borderRadius: '12px' }}/>
+            <h2>問題背景</h2>
+            <p>
+                傳統的電池製程資料管理流程中，存在高度仰賴人工操作的痛點。具體流程如下：
+                •	製造部門：負責定期收集電芯序號資料並儲存於 Excel 檔案中，將檔案提供給品保部門。
+                •	品保部門：根據出貨的 Excel 檔案，人工比對電芯序號，確認出貨電池符合製程記錄。
+                此流程的主要問題包括：
+                •	高度依賴人工彙整與比對資料，容易出錯。
+                •	Excel 檔案格式若有誤或遺漏，會造成跨部門反覆修正，拖延出貨時程。
+                •	缺乏資料即時性與整合性，無法快速掌握製程與出貨狀況。
+                為了解決上述問題，企業有必要導入能即時整合資料、減少人工作業並提升準確性的數位平台。
+            </p>
+            <FlowChart/>
+            <h2>目的</h2>
+            <p>
+                透過導入大數據平台，整合電池製程相關數據，進一步優化跨部門間的行政流程。傳統上，製造部門需定期彙整電芯序號並以 Excel 檔案形式傳遞給品保部門進行出貨比對，此方式不僅仰賴人工處理，且資料錯誤或格式不一致時常造成流程中斷，影響出貨效率。透過大數據平台的建置，期望達成以下目標：
+                1.	降低人工輸入與比對錯誤的發生，提升資料準確性。
+                2.	縮短資料流通時間，減少跨部門溝通與反覆修正作業，實現即時資訊共享，提升整體作業效率。
+                3.	建立資料可追溯性機制，強化品質管理與問題追蹤能力。
+                4.	為後續製程改善與決策提供可靠的數據基礎。
+                藉由平台的實作與導入，期望提升企業內部行政流程的數位化程度，為日後持續優化製程管理奠定穩固基礎。
+            </p>
+            <Timeline
+                mode="left"
+                items={[
+                {
+                    label: '導入前',
+                    children: '依賴人工 Excel 操作，資料不一致',
+                },
+                {
+                    label: '平台導入',
+                    children: '整合資料進平台，自動比對',
+                },
+                {
+                    label: '導入後',
+                    children: '減少錯誤，提升出貨效率',
+                },
+                ]}
+            />
         </div>
     );
 }

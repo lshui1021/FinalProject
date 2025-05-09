@@ -24,8 +24,10 @@ function Intern(){
                 title="資訊部服務課-實習生"
                 description="劉書卉"
                 />
-                <Button shape="round" icon={<FileTextOutlined />} color="default" variant="outlined" style={{ marginTop: 16 }}>
-                實習成果報告</Button>
+                <a href="/report">
+                    <Button shape="round" icon={<FileTextOutlined />} color="default" variant="outlined" style={{ marginTop: 16 }}>
+                    實習成果報告</Button>
+                </a>
             </Card>
           </div>
         </>

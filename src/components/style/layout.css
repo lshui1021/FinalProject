@@ -47,12 +47,6 @@
   color: inherit;
 }
 
-.title{
-    padding: 30px;
-    text-align: center;
-    background-color: #F9FCFF;
-}
-
 .footer {
   display: flex;
   justify-content: center;

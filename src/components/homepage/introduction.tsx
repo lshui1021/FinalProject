@@ -4,6 +4,17 @@ import { DeploymentUnitOutlined, FundProjectionScreenOutlined } from '@ant-desig
 function Intro(){
     return(
         <>
+         <div className='title'>
+          <div className='title-theme'>
+            <h1>元智大學資訊管理學系</h1>
+            <h1>第三十屆專業實習成果展</h1>
+          </div>
+          <div className='inform'>
+              <p>公司代號: AN</p>
+              <p>指導教授: 張國忠</p>
+              <p>學生: 1111718 劉書卉</p>
+          </div>
+        </div>
             <div className='intro-header'>
                 <DeploymentUnitOutlined className='icon'/>
                 <h2 className='section-title'
