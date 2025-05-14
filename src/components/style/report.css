@@ -1,3 +1,50 @@
+.report-page {
+  max-width: 960px; 
+  margin: 20px auto; /* 水平居中頁面內容 */
+  padding: 20px;
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.report-title {
+  font-size: 1.5em; 
+  font-weight: bold; 
+  text-align: center; 
+  color: #283655; 
+  margin-bottom: 2em; 
+}
+
+.report-page h2 {
+  margin: 30px;
+  text-align: center;
+}
+
+.report-page p{
+  text-indent: 2em;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.report-page ul {
+  list-style-type: disc; /* 實心圓點 */
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.report-page li {
+  text-indent: 0;
+  margin-bottom: 0.5em; 
+  margin-left: 4em;
+}
+
+.report-page img{
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  height: auto;
+  margin: 20px auto;
+}
+
 .guide-line {
   position: sticky;
   top: 0;
@@ -8,10 +55,10 @@
   background-color: white;
 }
 
- .formpic{
-    width: 300px;
-    float:left; /* 圖片在左邊 */
-    padding: 20px;
+.formpic{
+  width: 300px;
+  float: left; 
+  padding: 20px;
   }
 
   .card-container {
@@ -28,10 +75,9 @@
     display: flex;
     padding: 10px;
     width: 200px; 
-    height: 100px; 
+    height: 120px; 
     overflow: hidden;
     margin: 20px auto;
-    align-items: flex-start;
     transition: transform 0.2s;
   }
 
@@ -39,7 +85,7 @@
     transform: translateY(-5px); /* 懸停時略微上移 */
   }
 
-  .card-img {
+  .report-page .card-img {
     width: 80px;
     height: 80px;
   }
