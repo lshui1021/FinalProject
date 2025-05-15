@@ -14,7 +14,6 @@ function Intern(){
           </div>
           <div className='card-intern'>
             <Card className='card-content'
-                style={{ width: 300 }}
                 cover={
                     <Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" 
                     style={{ height: 300 }}/>

@@ -24,7 +24,6 @@ function App() {
           <>
             <Header />
             <Report />
-            <Footer />
           </>
         }/>
       </Routes>

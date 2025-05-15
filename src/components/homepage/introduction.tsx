@@ -1,5 +1,6 @@
 import '/src/components/style/intro.css';
 import { DeploymentUnitOutlined, FundProjectionScreenOutlined } from '@ant-design/icons';
+import companyImg from '/src/assets/companyImg.png';
 
 function Intro(){
     return(
@@ -23,7 +24,7 @@ function Intro(){
             <div className='intro-body'>
                 <img
                 className='company-image'
-                src="https://gustech.com/wp-content/uploads/2021/04/3501104_1-1.jpg"
+                src= {companyImg}
                 alt="格斯科技"
                 />
                 <div className='intro-text'>

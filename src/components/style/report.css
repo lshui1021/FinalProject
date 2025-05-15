@@ -2,6 +2,7 @@
   max-width: 960px; 
   margin: 20px auto; /* 水平居中頁面內容 */
   padding: 20px;
+  padding-bottom: 50px;
   border-radius: 8px; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
@@ -18,6 +19,10 @@
   margin: 30px;
   text-align: center;
 }
+.report-page h4 {
+  margin-left: 2em;
+  font-weight: bold;
+}
 
 .report-page p{
   text-indent: 2em;
@@ -28,9 +33,10 @@
 .report-page ul {
   list-style-type: disc; /* 實心圓點 */
   margin-top: 0.5em;
-  margin-bottom: 1.5em;
 }
-
+.report-page ol {
+  list-style-type: circle;
+}
 .report-page li {
   text-indent: 0;
   margin-bottom: 0.5em; 
@@ -47,12 +53,12 @@
 
 .guide-line {
   position: sticky;
-  top: 0;
+  top: 40px;
   width: fit-content; 
   margin: 0 auto;
   padding: 8px 16px;
   border-bottom: 1px solid #ddd;
-  background-color: white;
+  z-index: 3;
 }
 
 .formpic{
@@ -101,5 +107,35 @@
     font-weight: bold;
     padding: 10px;
   }
-  
-  
+
+  .btmNav{
+    display: none;
+  }
+
+@media (max-width: 1023px) {
+  .guide-line {
+    display: none;
+  }
+  .btmNav{
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0; 
+      background-color: #ffffff;
+      border-top: 1px solid #f0f0f0;
+      z-Index: 1000;
+  }
+  .report-title {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 660px) {
+ .report-page p{
+  text-indent: 1em;
+}
+ .report-page li {
+  margin-left: 2em;
+}
+}
+

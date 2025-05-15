@@ -4,6 +4,8 @@ import PreResults from './preliminary-results';
 import Conclusion from './conclusion-and-future';
 import '/src/components/style/report.css';
 import { Breadcrumb } from 'antd';
+import { SignatureOutlined, AlertOutlined, ToolOutlined, CarryOutOutlined, BorderlessTableOutlined} from '@ant-design/icons';
+import RBottomNavigation from './bottom-nagative';
 
 function Report(){
     return (
@@ -13,23 +15,48 @@ function Report(){
             items={[
             {
                 href: '#report-theme',
-                title: '研究主題',
+                title: (
+                        <>
+                           <SignatureOutlined />
+                            <span>研究主題</span>
+                        </>
+                    )
             },
             {
                 href: '#report-bg',
-                title: '問題背景',
+                title: (
+                        <>
+                            <AlertOutlined/>
+                            <span>問題背景</span>
+                        </>
+                    )
             },
             {
                 href: '#report-tool',
-                title: '方法&工具',
+                title: (
+                        <>
+                            <ToolOutlined />
+                            <span>方法&工具</span>
+                        </>
+                    )
             },
             {
                 href: '',
-                title: '成果展示',
+                title: (
+                        <>
+                            <CarryOutOutlined />
+                            <span>成果展示</span>
+                        </>
+                    )
             },
             {
                 href: '',
-                title: '結論',
+                title: (
+                        <>
+                            <BorderlessTableOutlined />
+                            <span>結論</span>
+                        </>
+                    )
             },
             ]}
         />
@@ -39,6 +66,8 @@ function Report(){
             <Methodology/>
             <PreResults/>
             <Conclusion/>
+            <RBottomNavigation/>
+            
         </>
     );
 }

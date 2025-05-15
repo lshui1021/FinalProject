@@ -1,85 +1,110 @@
 /* 重置樣式 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding: 110px;
+}
+
+:root {
+  --primary-color: #495E74;
+  --background-color: #ffffff;
+  --text-color: #333333;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2.2rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+p {
+  color: var(--primary-color);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+@media (max-width: 660px) {
+  * {
+  scroll-padding: 80px;
   }
-  
-  :root {
-    --primary-color: #495E74;
-    --background-color: #ffffff;
-    --text-color: #333333;
-  }
-  
   body {
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    font-size: 1rem;
+    line-height: 1.6;
   }
-  
   h1 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    
-  }
-  
-  h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-
-  h3 {
     font-size: 1.5rem;
-    font-weight: bold;
+    line-height: 1.3;
   }
-  
+  h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
   p {
-    color: var(--primary-color);
-    margin-top: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-bottom: 12px;
   }
-
   a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
+  .icon {
+    font-size: 30px; /* 小型螢幕縮小圖示 */
+  }
+}
 
-  .icon{
-    font-size: 40px;
+@media (min-width: 660px) and (max-width: 1023px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.55;
   }
-  
-  @media (max-width: 660px) {
-    body {
-        font-size: 1rem;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      h2 {
-        font-size: 1.2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      a {
-        font-size: 0.8rem;
-      }
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
   }
-  
-  @media (min-width: 660px) and (max-width: 1023px) {
-    body {
-        font-size: 1rem;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      p {
-        font-size: 1rem;
-      }
-      a {
-        font-size: 1rem;
-      }
+  p {
+    font-size: 1rem;
+    margin-top: 8px;
+    margin-bottom: 12px;
   }
+  a {
+    font-size: 1rem;
+  }
+  .icon {
+    font-size: 35px; /* 中型螢幕調整圖示 */
+  }
+}

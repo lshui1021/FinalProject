@@ -1,20 +1,21 @@
 .navbar{
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    padding: 10px 30px;
     justify-content: space-between;
     align-items: center;
     background-color: #D0E0E3;
-    padding: 10px 30px;
     width: 100%;
-    margin-bottom: 0;
+    height: 100px;
 }
 .logo {
     height: 80px;
-    object-fit: contain;
   }
 
 .nav-menu{
     display: flex;
-    align-items: center;
     list-style: none;
     gap: 60px;
 }
@@ -33,7 +34,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background-color: #A6A6A6;
+  background-color: #a8a8a8;
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.3s ease;
@@ -57,6 +58,9 @@
 }
 
 @media (max-width: 660px) {
+  .navbar{
+    height: 60px;
+}
   .logo {
     height: 40px;
   }

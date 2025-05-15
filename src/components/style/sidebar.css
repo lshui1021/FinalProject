@@ -1,6 +1,7 @@
 /* src/style/sidebar.css */
 .sidebar {
   background-color: rgba(235, 243, 255, 0.9);
+  z-index: 2;
   width: fit-content;
   position: fixed;
   bottom: 20px;
