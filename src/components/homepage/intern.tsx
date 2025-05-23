@@ -1,4 +1,4 @@
-import { UserOutlined, FileTextOutlined } from '@ant-design/icons';
+import { FileTextOutlined } from '@ant-design/icons';
 import { Button} from 'antd';
 import { Avatar, Card } from 'antd';
 
@@ -7,11 +7,11 @@ const { Meta } = Card;
 function Intern(){
     return(
         <>
-          <div className='intro-header'>
-            <UserOutlined className='icon'/>
-            <h2 className='section-title'
-                id='Intern'>實習生 Intern</h2>
-          </div>
+        <div className="line"></div>
+
+        <h2 className='title-text'
+            id='Intern'>實習生 Intern</h2>
+         
           <div className='card-intern'>
             <Card className='card-content'
                 cover={

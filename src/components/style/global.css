@@ -30,7 +30,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -58,7 +58,7 @@ a {
   font-size: 40px;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 767px) {
   * {
   scroll-padding: 80px;
   }
@@ -87,7 +87,7 @@ a {
   }
 }
 
-@media (min-width: 660px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   body {
     font-size: 1rem;
     line-height: 1.55;

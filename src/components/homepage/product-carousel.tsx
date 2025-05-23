@@ -1,40 +1,70 @@
 import { Carousel } from 'antd';
 import 'antd/dist/reset.css';
 import '/src/components/style/product.css';
-import batteryImg from '/src/assets/battery.png';
-import moduleImg from '/src/assets/module.png';
-import storageImg from '/src/assets/storage.png';
+import batteryImg from '/src/assets/product.png';
+import moduleImg from '/src/assets/product2.png';
+import { useEffect, useState } from 'react';
 
 const products = [
     {
-      title: '軟包鋰電池',
+      num: '01',
+      title: '軟包電芯',
       image: batteryImg,
-      description: '全製程電芯生產過程，包含混漿、塗佈、輥壓、模切、堆疊、封裝、注液及活化，皆有嚴謹品質把關，體現格斯對電芯品質的堅持。'
+      description: '相較於鋁殼圓柱或方罐電池，單電芯容量大、輕巧且易於回收，現今純電車產業趨向採用軟包電芯作為電池組設計優先考量。'
     },
     {
+      num: '02',
       title: '模組設計',
       image: moduleImg,
-      description: '提供從模組設計、方案提案到樣品組裝的一站式服務，協助縮短開發時程、降低打樣與試產成本，有效提升產品競爭力。'
-    },
-    {
-      title: '儲能系統',
-      image: storageImg,
-      description: '靈活設計，依照需求及使用條件不同進行電池串並及監控功能，應用於再生能源蓄電、住宅備電、離網/併網系統等。'
+      description: '根據客戶需求客製電池組，具獨立開發適配電池管理系統(BMS)的能力，協助縮短開發時程、降低打樣與試產成本，有效提升產品競爭力。'
     }
-  ];
+];
 
-  function ProductCarousel(){
-    return(
-      <div className="product-carousel-container">
-        <Carousel arrows infinite={false}>
-            {products.map((item, index) => (
-            <div key={index} className="carousel-item">
-                <img src={item.image} alt={item.title} className="carousel-img" />
-                <h2 className="carousel-title">{item.title}</h2>
-                <p className="carousel-desc">{item.description}</p>
+function ProductCarousel() {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    return (
+        <div className="container">
+            <div className="news-slider__item">
+                {isMobile ? (
+                    <Carousel arrows infinite={false}>
+                        {products.map((item, index) => (
+                            <a href="#" key={index} className="news__item">
+                                <div className="news-date">{item.num}</div>
+                                <div className="news__title">{item.title}</div>
+                                <p className="news__txt">{item.description}</p>
+                                <div className="news__img">
+                                    <img src={item.image} alt={item.title} />
+                                </div>
+                            </a>
+                        ))}
+                    </Carousel>
+                ) : (
+                    <div className="news-slider__wrp">
+                        {products.map((item, index) => (
+                            <a href="#" key={index} className="news__item">
+                                <div className="news-date">{item.num}</div>
+                                <div className="news__title">{item.title}</div>
+                                <p className="news__txt">{item.description}</p>
+                                <div className="news__img">
+                                    <img src={item.image} alt={item.title} />
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                )}
             </div>
-           ))}
-        </Carousel>
-      </div>
-    )
-}export default ProductCarousel
+        </div>
+    );
+}
+
+export default ProductCarousel;
